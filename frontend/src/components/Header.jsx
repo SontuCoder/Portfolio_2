@@ -1,7 +1,10 @@
-import React from 'react';
+import React,{useState} from "react";
+import Navber from "./Navber";
 import logo from "../assets/images/logo.svg";
 
+
 const Header = () => {
+    const [navOpen, staNavOpen] = useState(false);
     return (
         <header className='fixed top-0 left-0 w-full h-29 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zink-900/0'>
             <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6
@@ -20,9 +23,9 @@ const Header = () => {
                             menu
                         </span>
                     </button>
-                    Navber
+                    <Navber navOpen={navOpen}/>
                 </div>
-                <a href="#contact" className=''>
+                <a href="#contact" className='btn btn-secondary max-md:hidden md:justify-self-end'>
                     Contact Me
                 </a>
             </div>
