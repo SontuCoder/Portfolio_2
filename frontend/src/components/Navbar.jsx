@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Navber = (navOpen) => {
+const Navbar = (navOpen) => {
     const [activeLink, setActiveLink] = useState('#home'); 
     const activeBox = useRef();
     
@@ -56,8 +56,8 @@ const Navber = (navOpen) => {
     );
 };
 
-Navber.prototype = {
+Navbar.prototype = {
     navOpen: PropTypes.bool.isRequired
 }
 
-export default Navber;
+export default Navbar;
