@@ -1,9 +1,10 @@
-/** @type {import('tailwindcss').Config} */
 
-import tailwindScrollbar from 'tailwind-scrollbar';
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const tailwindScrollbar = require("tailwind-scrollbar");
 
 export default {
-  mode: 'jit', // Enable JIT mode explicitly
+  mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -16,4 +17,4 @@ export default {
     },
   },
   plugins: [tailwindScrollbar],
-}
+};
